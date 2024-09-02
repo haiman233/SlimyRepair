@@ -11,12 +11,12 @@ public class SRItems {
     // Category
     public static final ItemGroup slimy_repair = new ItemGroup(
         new NamespacedKey(SlimyRepair.getInstance(), "slimy_repair"),
-        new CustomItemStack(Material.ANVIL, "&aSlimy Repair"));
+        new CustomItemStack(Material.ANVIL, "&a粘液铁砧"));
 
     public static final SlimefunItemStack SLIMY_ANVIL = new SlimefunItemStack("SLIMY_ANVIL",
         Material.SLIME_BLOCK,
-        "&a&lSlimy Anvil",
+        "&a&l粘液铁砧",
         "",
-        "&7Used to repair Slimefun tools easily"
+        "&7可轻松修复粘液工具"
     );
 }
