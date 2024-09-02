@@ -59,7 +59,7 @@ public class SlimyAnvil extends SlimefunItem implements RecipeDisplayItem {
                     Damageable damageable = (Damageable) meta;
 
                     if (!SlimyRepair.repairMap.containsKey(sfItem)) {
-                        send(p, "&cThis item can not be repaired!");
+                        send(p, "&c此物品无法被修复!");
                         return;
                     }
 
@@ -73,17 +73,17 @@ public class SlimyAnvil extends SlimefunItem implements RecipeDisplayItem {
                         } else {
                             itemName = toTitleCase(repairItem.getType().name().replace('_', ' '));
                         }
-                        send(p, "&aThis item can be repaired!" +
-                            "\n  &bRequires: &e" + itemName +
-                            "\n  &bRepairs: &e" + SlimyRepair.repairMap.get(sfItem).getSecondValue() + " Durability" +
-                            "\n  &6Sneak and right click the Slimy Anvil to repair this item!!");
+                        send(p, "&a此物品可以被修复!" +
+                            "\n  &b需要: &e" + itemName +
+                            "\n  &b修复: &e" + SlimyRepair.repairMap.get(sfItem).getSecondValue() + " 耐久" +
+                            "\n  &6请潜行右击粘液铁砧来修复此物品!!");
                         return;
                     }
 
                     // Block interaction if the item is repaired AFTER checking for sneaking in case
                     // the player only wants to see item info.
                     if (!damageable.hasDamage()) {
-                        send(p, "&cThis item is already repaired!");
+                        send(p, "&c此物品已被修复!");
                         return;
                     }
 
@@ -124,7 +124,7 @@ public class SlimyAnvil extends SlimefunItem implements RecipeDisplayItem {
     }
 
     private void send(Player p, String message) {
-        p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7[&a&lSlimy&7&lRepair&8] " + message));
+        p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7[&a&l粘液&7&l铁砧&8] " + message));
     }
 
     public static String toTitleCase(String givenString) {
